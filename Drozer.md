@@ -1,3 +1,14 @@
+# Installation
+  --> wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+  --> sudo python2.7 get-pip.py
+  --> pip2.7 install drozer
+
+# Setup Drozer
+  --> Forward Port for Connection b/w Android Server and Machine
+      **--> adb forward tcp:31415 tcp:31415**
+  --> Connect with Server
+      **--> drozer console connect**
+
 # Package List
   --> run app.package.list -f <search string>
 
