@@ -1,10 +1,17 @@
 # Installation
-  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py; python2 get-pip.py; pip2.7 install protobuf; pip2.7 install pyOpenSSL; git clone https://github.com/hamcrest/PyHamcrest.git; cd PyHamcrest;sudo python3 setup.py install;cd; sudo pip2.7 install Twisted;
+    curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+    sudo python2.7 get-pip.py
+    sudo pip2.7 install protobuf
+    sudo pip2.7 install pyOpenSSL
+    git clone https://github.com/hamcrest/PyHamcrest.git
+    cd PyHamcrest
+    sudo python3 setup.py install
+    cd; sudo pip2.7 install Twisted
 
   # To install Drozer, execute 1 of below command
       1). wget https://github.com/mwrlabs/drozer/releases/download/2.4.4/drozer-2.4.4-py2-none-any.whl; sudo pip2.7 install drozer-2.4.4-py2-none-any.whl
       2). pip install drozer
-      
+
 # Setup Drozer
   --> Forward Port for Connection b/w Android Server and Machine
       **--> adb forward tcp:31415 tcp:31415**
