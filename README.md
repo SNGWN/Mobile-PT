@@ -28,7 +28,12 @@ Mobile-PT/
 
 ## 📚 Documentation
 
+### Core Security Guides
+- [🔍 Security Testing Checklist](docs/security-testing-checklist.md) - Comprehensive testing methodology
+- [⚡ Quick Reference Guide](docs/quick-reference.md) - Commands and cheat sheets
+
 ### Android Security
+- [Android Security Testing Guide](docs/android/README.md)
 - [Android Application Architecture](docs/android/1.3%20--%20Android%20Application%20Architecture.md)
 - [Android Security Model](docs/android/1.8%20--%20User%20Permission%20and%20Application%20Permission.md)
 - [Android File Structure](docs/android/1.9%20--%20Android%20File%20Structure.md)
@@ -36,9 +41,9 @@ Mobile-PT/
 
 ### iOS Security
 - [iOS Security Testing Guide](docs/ios/README.md)
+- [iOS Tools Setup Guide](docs/ios/tools-setup.md)
 - [iOS Architecture Overview](docs/ios/README.md#ios-architecture-overview)
 - [iOS Security Model](docs/ios/README.md#ios-security-model)
-- [Static & Dynamic Analysis](docs/ios/README.md#static-analysis)
 
 ### FRIDA Framework
 - [FRIDA Overview](docs/frida/README.md)
@@ -47,6 +52,7 @@ Mobile-PT/
 - [Script Development](docs/frida/README.md#script-structure)
 
 ### Security Tools
+- [Android Tools Setup](docs/tools/android-tools-setup.md)
 - [ADB Commands](docs/tools/ADB%20Commands.md)
 - [Drozer Framework](docs/tools/Drozer.md)
 - [Burp Suite Configuration](docs/tools/Burp%20Suite%20Configuration%20for%20Android%20API%20Greater%20than%2023.md)
@@ -59,13 +65,16 @@ Mobile-PT/
 
 ### Android Scripts
 - [Root Detection Bypass](frida-scripts/android/root-detection-bypass.js)
-- [Anti-Debugging Bypass](frida-scripts/android/) 
-- [Certificate Pinning Bypass](frida-scripts/android/)
+- [Anti-Debugging Bypass](frida-scripts/android/anti-debugging-bypass.js) 
+- [Crypto Monitor](frida-scripts/android/crypto-monitor.js)
+- [Network Monitor](frida-scripts/android/network-monitor.js)
 
 ### iOS Scripts  
 - [Jailbreak Detection Bypass](frida-scripts/ios/jailbreak-detection-bypass.js)
-- [Touch ID/Face ID Bypass](frida-scripts/ios/)
-- [SSL Pinning Bypass](frida-scripts/ios/)
+- [Biometric Authentication Bypass](frida-scripts/ios/biometric-bypass.js)
+
+### Script Documentation
+- [Complete FRIDA Scripts Guide](frida-scripts/README.md)
 
 ## 🎥 Video Tutorials - Pentesting Club
 
