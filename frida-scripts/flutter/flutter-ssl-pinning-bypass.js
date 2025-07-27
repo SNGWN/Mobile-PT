@@ -108,8 +108,12 @@ setTimeout(function() {
                         
                         // Bypass certificate validation methods
                         if (method.includes("validate") || method.includes("verify") || method.includes("check")) {
-                            console.log("[*] Bypassing certificate validation method: " + method);
-                            return Java.use("java.lang.Boolean").TRUE;
+                            if (ENABLE_SSL_BYPASS) {
+                                console.log("[*] Bypassing certificate validation method: " + method);
+                                return Java.use("java.lang.Boolean").TRUE;
+                            } else {
+                                console.log("[!] SSL bypass attempted but is disabled. Method: " + method);
+                            }
                         }
                     }
                     
