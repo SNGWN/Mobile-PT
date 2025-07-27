@@ -117,6 +117,12 @@ The `Applications/` directory contains various vulnerable applications for testi
 
 ## 🛠️ Essential Tools Setup
 
+### Environment Validation
+```bash
+# Run the environment validation script
+./validate-environment.sh
+```
+
 ### Android Testing Tools
 ```bash
 # ADB (Android Debug Bridge)
@@ -128,6 +134,29 @@ pip install frida-tools
 
 # MobSF (Mobile Security Framework)
 docker pull opensecurity/mobsf
+```
+
+### Flutter Testing Tools
+```bash
+# Flutter SDK
+git clone https://github.com/flutter/flutter.git -b stable
+export PATH="$PATH:`pwd`/flutter/bin"
+
+# Flutter security analysis tools
+pip install reify
+git clone https://github.com/ptswarm/reflutter.git
+
+# Verify installation
+flutter doctor
+```
+
+### Network Testing
+```bash
+# Burp Suite Community/Professional
+# OWASP ZAP
+# Wireshark for traffic analysis
+# mitmproxy for advanced HTTP/HTTPS interception
+pip install mitmproxy
 ```
 
 ### iOS Testing Tools
@@ -144,31 +173,27 @@ brew install class-dump
 brew install ios-deploy
 ```
 
-### Network Testing
-```bash
-# Burp Suite Community/Professional
-# OWASP ZAP
-# Wireshark for traffic analysis
-```
-
 ## 🔒 Security Testing Methodology
 
 ### 1. **Information Gathering**
 - App store analysis
 - Permissions review
 - Technology stack identification
+- Framework detection (Native/Flutter/React Native)
 
 ### 2. **Static Analysis**
 - Code review
 - Binary analysis  
 - Configuration assessment
 - Hardcoded secrets detection
+- Framework-specific analysis (Flutter assets, etc.)
 
 ### 3. **Dynamic Analysis**
 - Runtime behavior monitoring
 - Network traffic analysis
 - Memory dumping
 - API testing
+- Platform channel monitoring (Flutter)
 
 ### 4. **Security Testing**
 - Authentication bypass
@@ -176,6 +201,7 @@ brew install ios-deploy
 - Input validation
 - Data storage security
 - Communication security
+- Certificate pinning bypass
 
 ### 5. **Reporting**
 - Vulnerability classification
