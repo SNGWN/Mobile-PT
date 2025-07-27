@@ -47,9 +47,14 @@ setTimeout(function() {
                     if (body) {
                         try {
                             var buffer = Java.use("okio.Buffer").$new();
-                            body.writeTo(buffer);
-                            var bodyContent = buffer.readUtf8();
-                            console.log("[*] Request Body: " + bodyContent);
+                            var clonedBody = body; // Preserve the original body
+                            try {
+                                clonedBody.writeTo(buffer);
+                                var bodyContent = buffer.readUtf8();
+                                console.log("[*] Request Body: " + bodyContent);
+                            } catch (e) {
+                                console.log("[*] Request Body: <binary data>");
+                            }
                             
                             // Check for sensitive data in body
                             var bodyLower = bodyContent.toLowerCase();
