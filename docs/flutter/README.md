@@ -12,7 +12,6 @@
 9. [Common Vulnerabilities](#common-vulnerabilities)
 10. [Testing Tools](#testing-tools)
 11. [FRIDA Scripts for Flutter](#frida-scripts-for-flutter)
-11. [FRIDA Scripts for Flutter](#frida-scripts-for-flutter)
 12. [Best Practices](#best-practices)
 13. [Research Article Summaries](#research-article-summaries)
 
@@ -336,7 +335,6 @@ fi
 6. **Network Layer**: May use custom HTTP implementations that bypass system settings
 
 Understanding these differences is crucial for effective security testing of Flutter applications.
-13. [Research Article Summaries](#research-article-summaries)
 
 ## Flutter Architecture Overview
 
