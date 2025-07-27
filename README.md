@@ -9,12 +9,14 @@ A comprehensive collection of tools, scripts, and documentation for mobile appli
 Mobile-PT/
 ├── docs/
 │   ├── android/          # Android security documentation
-│   ├── ios/              # iOS security documentation  
+│   ├── ios/              # iOS security documentation
+│   ├── flutter/          # Flutter security documentation  
 │   ├── frida/            # FRIDA toolkit documentation
 │   └── tools/            # Tool-specific guides
 ├── frida-scripts/        # Ready-to-use FRIDA scripts
 │   ├── android/          # Android-specific scripts
 │   ├── ios/              # iOS-specific scripts
+│   ├── flutter/          # Flutter-specific scripts
 │   └── universal/        # Cross-platform scripts
 ├── Applications/         # Sample vulnerable apps for testing
 └── books/               # Reference materials and guides
@@ -23,8 +25,9 @@ Mobile-PT/
 ### Getting Started
 1. **Android Testing**: Start with [Android Setup Guide](docs/android/)
 2. **iOS Testing**: Begin with [iOS Setup Guide](docs/ios/)
-3. **FRIDA**: Learn dynamic instrumentation with [FRIDA Documentation](docs/frida/)
-4. **Tools**: Explore security tools in [Tools Directory](docs/tools/)
+3. **Flutter Testing**: Explore [Flutter Security Guide](docs/flutter/)
+4. **FRIDA**: Learn dynamic instrumentation with [FRIDA Documentation](docs/frida/)
+5. **Tools**: Explore security tools in [Tools Directory](docs/tools/)
 
 ## 📚 Documentation
 
@@ -44,6 +47,13 @@ Mobile-PT/
 - [iOS Tools Setup Guide](docs/ios/tools-setup.md)
 - [iOS Architecture Overview](docs/ios/README.md#ios-architecture-overview)
 - [iOS Security Model](docs/ios/README.md#ios-security-model)
+
+### Flutter Security
+- [Flutter Security Testing Guide](docs/flutter/README.md)
+- [Flutter Architecture & Security Model](docs/flutter/README.md#flutter-architecture-overview)
+- [Flutter Network Traffic Interception](docs/flutter/README.md#network-traffic-interception)
+- [Flutter Certificate Pinning Bypass](docs/flutter/README.md#certificate-pinning-bypass)
+- [Flutter Platform Channel Security](docs/flutter/README.md#common-vulnerabilities)
 
 ### FRIDA Framework
 - [FRIDA Overview](docs/frida/README.md)
@@ -73,6 +83,11 @@ Mobile-PT/
 - [Jailbreak Detection Bypass](frida-scripts/ios/jailbreak-detection-bypass.js)
 - [Biometric Authentication Bypass](frida-scripts/ios/biometric-bypass.js)
 
+### Flutter Scripts
+- [Flutter SSL Pinning Bypass](frida-scripts/flutter/flutter-ssl-pinning-bypass.js)
+- [Flutter Platform Channel Monitor](frida-scripts/flutter/flutter-platform-channel-monitor.js)
+- [Flutter HTTP Traffic Monitor](frida-scripts/flutter/flutter-http-monitor.js)
+
 ### Script Documentation
 - [Complete FRIDA Scripts Guide](frida-scripts/README.md)
 
@@ -82,43 +97,7 @@ Mobile-PT/
 [![Mobile App Pentesting Playlist](https://img.youtube.com/vi/Dnn2uHv7wwY/maxresdefault.jpg)](https://www.youtube.com/playlist?list=PL--2vyReuUpSCMs57J3FhZrD-24Rcp5H2)
 **Complete Mobile Application Security Testing Playlist**
 
-### Android Security Testing
-
-[![Android SSL Pinning Bypass with Frida](https://img.youtube.com/vi/SXtiVN7Trtw/maxresdefault.jpg)](https://www.youtube.com/watch?v=SXtiVN7Trtw)
-**Android SSL Pinning Bypass with FRIDA**
-
-[![Burp Suite Configuration for Android](https://img.youtube.com/vi/1721lyUtfYY/maxresdefault.jpg)](https://www.youtube.com/watch?v=1721lyUtfYY)
-**Burp Suite Configuration for Android Applications**
-
-[![Android Static Analysis with MobSF](https://img.youtube.com/vi/XHWDNcw_QKw/maxresdefault.jpg)](https://www.youtube.com/watch?v=XHWDNcw_QKw)
-**Android Static Analysis with Mobile Security Framework**
-
-[![Drozer Framework Tutorial](https://img.youtube.com/vi/QsDa0iYQfOQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=QsDa0iYQfOQ)
-**Complete Drozer Framework for Android Testing**
-
-### iOS Security Testing
-
-[![iOS Application Security Testing](https://img.youtube.com/vi/bw4eE1zJp1Y/maxresdefault.jpg)](https://www.youtube.com/watch?v=bw4eE1zJp1Y)
-**iOS Application Security Testing Basics**
-
-[![iOS SSL Pinning Bypass](https://img.youtube.com/vi/Kkqj8zjB8uY/maxresdefault.jpg)](https://www.youtube.com/watch?v=Kkqj8zjB8uY)
-**iOS SSL Certificate Pinning Bypass Techniques**
-
-### FRIDA Framework
-
-[![FRIDA Crash Course](https://img.youtube.com/vi/uc1mbN9EJKQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=uc1mbN9EJKQ)
-**FRIDA Framework Complete Tutorial**
-
-[![Advanced FRIDA Scripting](https://img.youtube.com/vi/CLVMOLzZJhI/maxresdefault.jpg)](https://www.youtube.com/watch?v=CLVMOLzZJhI)
-**Advanced FRIDA Scripting Techniques**
-
-### Mobile OWASP Testing
-
-[![OWASP Mobile Top 10](https://img.youtube.com/vi/qEeEuFPjz7s/maxresdefault.jpg)](https://www.youtube.com/watch?v=qEeEuFPjz7s)
-**OWASP Mobile Security Testing Guide**
-
-[![Mobile App Vulnerability Assessment](https://img.youtube.com/vi/YvJ2IpXvtoo/maxresdefault.jpg)](https://www.youtube.com/watch?v=YvJ2IpXvtoo)
-**Complete Mobile Application Vulnerability Assessment**
+*Note: This playlist contains comprehensive tutorials covering Android, iOS, and Flutter security testing methodologies.*
 
 ## 📱 Sample Applications
 
