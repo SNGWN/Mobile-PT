@@ -1,43 +1,101 @@
 # ADB - Android Debug Bridge
-	**ADB has 3 components**
-		1. Client = Computer System, through which pentester will pass commands to android device.
-		2. Daemon = Daemon is a background process which runs on android devices. Which Execute Commands on Device.
-		3. Server = Server is the Computer Machine which sends commands to android device.
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# ADB Commands :-
- 	- adb connect <IP>:<port>												:: Used to connect with android device on specific port (default port is 5555)
 
-	- adb disconnect <IP>													:: Disconnect a specific machine, if used without IP then disconnect all the devices
+## Table of Contents
+1. [ADB Architecture](#adb-architecture)
+2. [Connection Commands](#connection-commands)
+3. [Device Management](#device-management)
+4. [Application Management](#application-management)
+5. [Data Operations](#data-operations)
+6. [System Operations](#system-operations)
 
-	- adb reconnect															:: Reconnect to currently connected device
+## ADB Architecture
 
-	- adb devices																:: List out all the connected devices
+**ADB has 3 components:**
+1. **Client** - Computer system through which pentester passes commands to Android device
+2. **Daemon** - Background process running on Android device that executes commands
+3. **Server** - Computer machine that sends commands to Android device
 
-	- adb push <File to upload> <Where to upload>					:: Upload a specific file or folder to specific location on device.
+## Connection Commands
+```bash
+# Connect to device on specific port (default: 5555)
+adb connect <IP>:<port>
 
-	- adb shell																	:: get Device shell
+# Disconnect specific device, or all devices if no IP specified
+adb disconnect <IP>
 
-	- adb logcat |grep <App Name>											:: Show logs for Specific Application
+# Reconnect to currently connected device
+adb reconnect
 
-	- adb install <application.apk>										:: Install Application on device
-		:: Options that can be used while installation.
-			@ -l 					:: Forward Lock Application
-			@ -r 					:: Replace Existing Application
-			@ -t 					:: Allow test package
-			@ -s 					:: Install Application on SD-card
-			@ -g 					:: Grant all Runtime permission
+# List all connected devices
+adb devices
+```
 
-	- adb uninstall <package name>										:: Uninstall Application from devices
-		:: -k 					:: don't remove data and cache Directories
+## Device Management
 
-	- adb backup <option> 													:: Take Backup of device
-		:: Options for Device backup
-			@ -all 			:: Include all (System and User) Application in backup
-			@ -shared		:: Create Backup of Shared Storage (SD Card)
-			@ -obb			:: Create Backup of Application Extension stored in obb folder
+```bash
+# Get device shell
+adb shell
 
-	- adb restore <Backup File>											:: Restore device contents from backup File
+# Show logs for specific application
+adb logcat | grep <App Name>
 
-	- adb reboot <bootloader/recovery/sideload>						:: Reboot device into selected mode
+# Reboot device into selected mode
+adb reboot <bootloader/recovery/sideload>
+```
 
-	- adb sideload <package name>											:: Sideload specified package
+## Application Management
+
+### Installation
+```bash
+# Install application on device
+adb install <application.apk>
+
+# Installation options:
+#   -l : Forward Lock Application
+#   -r : Replace Existing Application
+#   -t : Allow test package
+#   -s : Install Application on SD-card
+#   -g : Grant all Runtime permissions
+```
+
+### Uninstallation
+```bash
+# Uninstall application from device
+adb uninstall <package name>
+
+# Uninstall options:
+#   -k : Don't remove data and cache directories
+```
+
+### Sideloading
+```bash
+# Sideload specified package
+adb sideload <package name>
+```
+
+## Data Operations
+
+### File Transfer
+```bash
+# Upload file or folder to specific location on device
+adb push <File to upload> <Where to upload>
+
+# Download file from device
+adb pull <remote file> <local destination>
+```
+
+### Backup and Restore
+```bash
+# Take backup of device
+adb backup <options>
+
+# Backup options:
+#   -all     : Include all (System and User) applications in backup
+#   -shared  : Create backup of shared storage (SD Card)
+#   -obb     : Create backup of application extensions stored in obb folder
+
+# Restore device contents from backup file
+adb restore <Backup File>
+```
+
+## System Operations
